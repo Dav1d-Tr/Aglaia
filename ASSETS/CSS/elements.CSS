@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+.product-elements{
+    padding-top: 50px;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+}
+
+.button-add {
+    display: flex;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #22A39F;
+    font-family: 'Lalezar', cursive;
+}
+
+/* ◢◤ Button add customer ◢◤ */
+
+.icon-btn {
+    width: 60px;
+    height: 60px;
+    color: #F3EFE0;
+    border: none;
+    background: #434242;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.4s ease-in-out;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    -webkit-transition: width 0.4s ease-in-out;
+    -moz-transition: width 0.4s ease-in-out;
+    -ms-transition: width 0.4s ease-in-out;
+    -o-transition: width 0.4s ease-in-out;
+}
+
+.add-btn:hover {
+    width: 150px;
+    background: linear-gradient(to right, #ecc896, #c29c6a);
+}
+
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 16px;
+    top: calc(50% - 2px);
+    background: linear-gradient(to right, #ecc896, #c29c6a);
+}
+
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-txt {
+    font-family: 'Merienda One', cursive;
+    transition: opacity 0.2s;
+    font-size: .9rem;
+    opacity: 0;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    top: calc(50% - 15px);
+    background: linear-gradient(to right, #ecc896, #c29c6a);
+    overflow: hidden;
+}
+
+.add-icon::before {
+    left: 28px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+    right: 28px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+    left: 20px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+    right: 20px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+    background: #222222;
+}
+
+/* ◢◤ Table ◢◤ */
+
+
+.table {
+    display: grid;
+    place-items: center;
+    padding: 0 5%;
+}
+
+#clients {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Merienda One', cursive;
+    /* border: 5px ridge #22A39F; */
+    text-align: center;
+}
+
+#clients thead {
+    background-color: #22A39F;
+    height: 50px;
+}
+
+#clients thead tr th {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .35px;
+    color: #F3EFE0;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+}
+
+#clients tbody tr td {
+    font-size: 16px;
+    letter-spacing: .35px;
+    font-weight: normal;
+    color: #333;
+    background: #eeeded;
+    padding: 8px;
+    text-align: center;
+}
+
+.buttons-table {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* ◢◤ Button Delete and Edit ◢◤ */
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: var(--bgd);
+    border: solid 3px transparent;
+    background-clip: padding-box;
+    box-shadow: 0px 0px 0px 3px #ffffff00;
+    color: white;
+    min-height: 43px;
+    padding: 0 13px 0 13px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 0px 3px var(--border);
+}
+
+.btn svg {
+    width: 16px;
+}
+
+/* ◢◤ Modal ◢◤ */
+
+.card {
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    top: 15%;
+    left: 32%;
+    background: #222222;
+    display: none;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.open {
+    display: flex;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    background-image: linear-gradient(to right, #ecc896, #c29c6a);
+    height: 200%;
+    animation: rotate 3s linear infinite;
+    transition: all 0.2s linear;
+    -webkit-animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: #222222;
+    z-index: 15;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card:hover::before {
+    animation-play-state: running;
+}
+
+.close {
+    color: #c29c6a;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    text-decoration: none;
+    z-index: 20;
+}
+
+.form{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 350px;
+    height: 40px;
+    padding: 15PX 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: inset 2px 5px 10px #ffffff;
+    color: #ffffff;
+    z-index: 20;
+    font-family: 'Merienda One', cursive;
+}
+
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-number-input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.btn-submit {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #ecc896, #c29c6a);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    z-index: 20;
+}
+
+.btn-submit svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.btn-submit span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.btn-submit:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+.btn-submit:hover span {
+    transform: translateX(7px);
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 0;
+    }
+
+    .title {
+        padding: 10px 0;
+        font-size: .7rem;
+    }
+
+    /* ◢◤ Button add customer ◢◤ */
+
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .add-btn:hover {
+        width: 80px;
+    }
+
+    .add-btn::before,
+    .add-btn::after {
+        height: 2px;
+        width: 16px;
+    }
+
+    .icon-btn:focus {
+        outline: none;
+    }
+
+    .btn-txt {
+        font-size: 10px;
+    }
+
+    .add-icon::after,
+    .add-icon::before {
+        height: 18px;
+        width: 1px;
+        top: calc(50% - 10px);
+    }
+
+    .add-icon::before {
+        left: 20.45px;
+    }
+
+    .add-icon::after {
+        right: 20.45px;
+    }
+
+    .add-btn:hover::before,
+    .add-btn:hover::after {
+        background: none;
+    }
+
+    #clients thead {
+        display: none;
+    }
+
+    #clients,
+    #clients tbody,
+    #clients tr,
+    #clients td {
+        display: block;
+        width: 100%;
+    }
+
+    #clients tr {
+        margin-bottom: 15px;
+    }
+
+    #clients tbody tr td {
+        text-align: right;
+        padding-left: 30%;
+        position: relative;
+        font-size: 12px;
+    }
+
+    #clients td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 30%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    #clients tbody tr .buttons-table {
+        display: flex;
+        text-align: center;
+        padding-left: 0;
+        position: relative;
+    }
+
+    /* ◢◤ Modal Responsive◢◤ */
+
+    .card {
+        width: 300px;
+        height: 350px;
+        top: 20%;
+        left: 3%;
+    }
+
+    .close {
+        color: #c29c6a;
+        font-size: 25px;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        margin-bottom: 40px;
+    }
+
+    .data {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    input {
+        width: 100%;
+        height: 30px;
+        padding: 10PX 15px;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        font-size: 15px;
+        padding: 0.5em 1em 0.5em 0.6em;
+    }
+}
