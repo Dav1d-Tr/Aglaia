@@ -52,7 +52,6 @@
     object-fit: cover;
 }
 
-
 .card-product:hover .item .card-image img:first-of-type,
 .card-product:hover .card__arc {
     display: none;
